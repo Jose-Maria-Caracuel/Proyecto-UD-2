@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triaje - Hospital Técnico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Técnico</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Página principal</a></li>
+            <li><a href="../../inicio.html">Iniciar sesión</a></li>
+            <li><a href="../../registro.html">Registrarse</a></li>
+        </ul>
+    </nav>
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-blue-600 mb-8">Sistema de Triaje - Urgencias</h1>
+        
+        <div class="mb-8 bg-blue-50 border-l-4 border-blue-600 p-6 rounded">
+            <h2 class="text-2xl font-bold text-blue-600 mb-4">Escala de Prioridad</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-red-100 border-2 border-red-600 rounded p-4 text-center">
+                    <div class="text-3xl font-bold text-red-600">I</div>
+                    <div class="font-bold text-red-600">EMERGENCIA</div>
+                    <div class="text-sm text-red-600">Atención inmediata</div>
+                </div>
+                <div class="bg-yellow-100 border-2 border-yellow-600 rounded p-4 text-center">
+                    <div class="text-3xl font-bold text-yellow-600">II</div>
+                    <div class="font-bold text-yellow-600">URGENTE</div>
+                    <div class="text-sm text-yellow-600">Menos de 10 minutos</div>
+                </div>
+                <div class="bg-blue-100 border-2 border-blue-600 rounded p-4 text-center">
+                    <div class="text-3xl font-bold text-blue-600">III</div>
+                    <div class="font-bold text-blue-600">MODERADO</div>
+                    <div class="text-sm text-blue-600">Menos de 1 hora</div>
+                </div>
+                <div class="bg-green-100 border-2 border-green-600 rounded p-4 text-center">
+                    <div class="text-3xl font-bold text-green-600">IV</div>
+                    <div class="font-bold text-green-600">MENOR</div>
+                    <div class="text-sm text-green-600">Menos de 4 horas</div>
+                </div>
+            </div>
+        </div>
+        
+        <form class="bg-white border-2 border-gray-300 rounded-lg p-8 shadow-lg space-y-6">
+            <div class="border-b-2 border-gray-200 pb-6">
+                <h3 class="text-xl font-bold text-gray-700 mb-4">Datos del Paciente</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Número de historia clínica:</label>
+                        <input type="text" name="historia" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="HC-XXXX" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Nombre del paciente:</label>
+                        <input type="text" name="nombre_paciente" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Nombre completo" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Edad:</label>
+                        <input type="number" name="edad" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" min="0" max="150" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Hora de llegada:</label>
+                        <input type="time" name="hora_llegada" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" required>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-b-2 border-gray-200 pb-6">
+                <h3 class="text-xl font-bold text-gray-700 mb-4">Evaluación Clínica</h3>
+                <div class="space-y-4">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Presión arterial:</label>
+                            <input type="text" name="presion_arterial" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Ej: 120/80">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Frecuencia cardíaca (ppm):</label>
+                            <input type="number" name="frecuencia_cardiaca" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" min="0" max="200">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Temperatura (°C):</label>
+                            <input type="number" name="temperatura" step="0.1" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" min="34" max="42">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-bold mb-2">Frecuencia respiratoria (rpm):</label>
+                            <input type="number" name="frecuencia_respiratoria" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" min="0" max="100">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-bold mb-2">Escala Glasgow (si aplica):</label>
+                        <input type="number" name="glasgow" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" min="3" max="15" placeholder="3-15">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-b-2 border-gray-200 pb-6">
+                <h3 class="text-xl font-bold text-gray-700 mb-4">Evaluación de Síntomas</h3>
+                <div class="space-y-3">
+                    <label class="flex items-center space-x-3 p-3 bg-red-50 rounded cursor-pointer hover:bg-red-100">
+                        <input type="checkbox" name="sintomas" value="dolor_torax" class="w-5 h-5 text-red-600">
+                        <span class="text-gray-700 font-semibold">Dolor torácico</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 bg-red-50 rounded cursor-pointer hover:bg-red-100">
+                        <input type="checkbox" name="sintomas" value="dificultad_respiratoria" class="w-5 h-5 text-red-600">
+                        <span class="text-gray-700 font-semibold">Dificultad para respirar</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 bg-yellow-50 rounded cursor-pointer hover:bg-yellow-100">
+                        <input type="checkbox" name="sintomas" value="hemorragia" class="w-5 h-5 text-yellow-600">
+                        <span class="text-gray-700 font-semibold">Hemorragia activa</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 bg-yellow-50 rounded cursor-pointer hover:bg-yellow-100">
+                        <input type="checkbox" name="sintomas" value="perdida_consciencia" class="w-5 h-5 text-yellow-600">
+                        <span class="text-gray-700 font-semibold">Pérdida de consciencia</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 bg-blue-50 rounded cursor-pointer hover:bg-blue-100">
+                        <input type="checkbox" name="sintomas" value="trauma" class="w-5 h-5 text-blue-600">
+                        <span class="text-gray-700 font-semibold">Traumatismo moderado</span>
+                    </label>
+                    <label class="flex items-center space-x-3 p-3 bg-green-50 rounded cursor-pointer hover:bg-green-100">
+                        <input type="checkbox" name="sintomas" value="otros" class="w-5 h-5 text-green-600">
+                        <span class="text-gray-700 font-semibold">Otros síntomas</span>
+                    </label>
+                </div>
+            </div>
+            
+            <div class="border-b-2 border-gray-200 pb-6">
+                <h3 class="text-xl font-bold text-gray-700 mb-4">Clasificación Final</h3>
+                <div>
+                    <label class="block text-gray-700 font-bold mb-3">Nivel de Prioridad:</label>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-3">
+                        <label class="flex items-center p-3 border-2 border-red-600 rounded-lg cursor-pointer hover:bg-red-50">
+                            <input type="radio" name="prioridad" value="I" class="w-4 h-4 text-red-600" required>
+                            <span class="ml-2 font-bold text-red-600">I - Emergencia</span>
+                        </label>
+                        <label class="flex items-center p-3 border-2 border-yellow-600 rounded-lg cursor-pointer hover:bg-yellow-50">
+                            <input type="radio" name="prioridad" value="II" class="w-4 h-4 text-yellow-600" required>
+                            <span class="ml-2 font-bold text-yellow-600">II - Urgente</span>
+                        </label>
+                        <label class="flex items-center p-3 border-2 border-blue-600 rounded-lg cursor-pointer hover:bg-blue-50">
+                            <input type="radio" name="prioridad" value="III" class="w-4 h-4 text-blue-600" required>
+                            <span class="ml-2 font-bold text-blue-600">III - Moderado</span>
+                        </label>
+                        <label class="flex items-center p-3 border-2 border-green-600 rounded-lg cursor-pointer hover:bg-green-50">
+                            <input type="radio" name="prioridad" value="IV" class="w-4 h-4 text-green-600" required>
+                            <span class="ml-2 font-bold text-green-600">IV - Menor</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <label class="block text-gray-700 font-bold mb-2">Observaciones del triaje:</label>
+                <textarea name="observaciones" rows="4" class="w-full px-4 py-2 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Notas adicionales del triaje..."></textarea>
+            </div>
+            
+            <div class="flex gap-4 pt-6 border-t-2 border-gray-200">
+                <button type="submit" class="flex-1 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                    Guardar Triaje
+                </button>
+                <a href="index.html" class="flex-1 bg-gray-400 hover:bg-gray-500 text-white font-bold py-3 px-6 rounded-lg text-center transition-colors">
+                    Volver
+                </a>
+            </div>
+        </form>
+        
+        <div class="mt-12">
+            <h3 class="text-2xl font-bold text-gray-700 mb-6">Pacientes en Triaje</h3>
+            <div class="overflow-x-auto bg-white rounded-lg shadow">
+                <table class="w-full">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="px-6 py-3 text-left font-bold">Paciente</th>
+                            <th class="px-6 py-3 text-left font-bold">Hora Llegada</th>
+                            <th class="px-6 py-3 text-left font-bold">Prioridad</th>
+                            <th class="px-6 py-3 text-left font-bold">Estado</th>
+                            <th class="px-6 py-3 text-left font-bold">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-6 py-4">María González</td>
+                            <td class="px-6 py-4">08:15</td>
+                            <td class="px-6 py-4"><span class="bg-red-100 text-red-600 px-3 py-1 rounded-full font-bold">I - Emergencia</span></td>
+                            <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full">En atención</span></td>
+                            <td class="px-6 py-4"><a href="#" class="text-blue-600 hover:text-blue-800 font-bold">Ver detalles</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-6 py-4">Carlos Rodríguez</td>
+                            <td class="px-6 py-4">08:22</td>
+                            <td class="px-6 py-4"><span class="bg-yellow-100 text-yellow-600 px-3 py-1 rounded-full font-bold">II - Urgente</span></td>
+                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">En espera</span></td>
+                            <td class="px-6 py-4"><a href="#" class="text-blue-600 hover:text-blue-800 font-bold">Ver detalles</a></td>
+                        </tr>
+                        <tr class="border-b hover:bg-gray-50">
+                            <td class="px-6 py-4">Ana López</td>
+                            <td class="px-6 py-4">08:35</td>
+                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full font-bold">III - Moderado</span></td>
+                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">En espera</span></td>
+                            <td class="px-6 py-4"><a href="#" class="text-blue-600 hover:text-blue-800 font-bold">Ver detalles</a></td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">Pedro Fernández</td>
+                            <td class="px-6 py-4">08:50</td>
+                            <td class="px-6 py-4"><span class="bg-green-100 text-green-600 px-3 py-1 rounded-full font-bold">IV - Menor</span></td>
+                            <td class="px-6 py-4"><span class="bg-blue-100 text-blue-600 px-3 py-1 rounded-full">En espera</span></td>
+                            <td class="px-6 py-4"><a href="#" class="text-blue-600 hover:text-blue-800 font-bold">Ver detalles</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Hospital Técnico - todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

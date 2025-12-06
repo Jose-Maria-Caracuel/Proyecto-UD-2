@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mapa de Camas - Hospital Técnico</title>
+    <link rel="stylesheet" href="../../css.css">
+  </head>
+  <body>
+    <header>
+        <h1>Hospital Técnico</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Página principal</a></li>
+            <li><a href="../../inicio.html">Iniciar sesión</a></li>
+            <li><a href="../../registro.html">Registrarse</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Mapa de Camas - Unidad de Enfermería</h1>
+        <div class="filtros">
+            <label>Filtrar por estado:
+                <select id="estado-filter">
+                    <option value="todas">Todas</option>
+                    <option value="ocupada">Ocupada</option>
+                    <option value="disponible">Disponible</option>
+                    <option value="mantenimiento">Mantenimiento</option>
+                </select>
+            </label>
+        </div>
+        <div class="mapa_camas">
+            <h2>Planta 1 - Sector A</h2>
+            <div class="camas_grid">
+                <div class="cama ocupada" title="Cama 101 - Juan Pérez">
+                    <div class="numero_cama">101</div>
+                    <div class="info_cama">
+                        <p><strong>Paciente:</strong> Juan Pérez</p>
+                        <p><strong>Doctor:</strong> Dr. Morales</p>
+                        <p><strong>Ingreso:</strong> 08/12/2025</p>
+                    </div>
+                </div>
+                <div class="cama disponible" title="Cama 102 - Disponible">
+                    <div class="numero_cama">102</div>
+                    <div class="estado">Disponible</div>
+                </div>
+                <div class="cama ocupada" title="Cama 103 - María García">
+                    <div class="numero_cama">103</div>
+                    <div class="info_cama">
+                        <p><strong>Paciente:</strong> María García</p>
+                        <p><strong>Doctor:</strong> Dr. Rodríguez</p>
+                        <p><strong>Ingreso:</strong> 05/12/2025</p>
+                    </div>
+                </div>
+                <div class="cama disponible" title="Cama 104 - Disponible">
+                    <div class="numero_cama">104</div>
+                    <div class="estado">Disponible</div>
+                </div>
+                <div class="cama mantenimiento" title="Cama 105 - Mantenimiento">
+                    <div class="numero_cama">105</div>
+                    <div class="estado">Mantenimiento</div>
+                </div>
+                <div class="cama ocupada" title="Cama 106 - Carlos López">
+                    <div class="numero_cama">106</div>
+                    <div class="info_cama">
+                        <p><strong>Paciente:</strong> Carlos López</p>
+                        <p><strong>Doctor:</strong> Dra. Díaz</p>
+                        <p><strong>Ingreso:</strong> 07/12/2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Hospital Técnico - todos los derechos reservados</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

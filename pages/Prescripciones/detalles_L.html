@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Cita - Hospital Técnico</title>
+    <link rel="stylesheet" href="../../css.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Técnico</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Página principal</a></li>
+            <li><a href="../../inicio.html">Iniciar sesión</a></li>
+            <li><a href="../../registro.html">Registrarse</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Detalle de Cita y Registro de Prescripción</h1>
+        <div class="detalle_cita">
+            <h2>Información de la Cita</h2>
+            <div class="cita_info">
+                <p><strong>Paciente:</strong> Juan Pérez</p>
+                <p><strong>Documento:</strong> 12345678</p>
+                <p><strong>Especialidad:</strong> Cardiología</p>
+                <p><strong>Fecha:</strong> 10/12/2025</p>
+                <p><strong>Hora:</strong> 09:30</p>
+                <p><strong>Doctor:</strong> Dr. Morales</p>
+                <p><strong>Consultorio:</strong> 101</p>
+            </div>
+        </div>
+        <div class="prescripcion_form">
+            <h2>Registro de Prescripción</h2>
+            <form>
+                <label>Diagnóstico:<br>
+                    <textarea name="diagnostico" rows="4" placeholder="Ingrese diagnóstico"></textarea>
+                </label>
+                <label>Medicamentos:<br>
+                    <textarea name="medicamentos" rows="5" placeholder="Ingrese medicamentos y dosis"></textarea>
+                </label>
+                <label>Notas adicionales:<br>
+                    <textarea name="notas" rows="4" placeholder="Notas del doctor"></textarea>
+                </label>
+                <label>Próxima cita (opcional):<br>
+                    <input type="date" name="proxima_cita">
+                </label>
+                <button type="submit">Guardar Prescripción</button>
+                <button type="reset">Limpiar formulario</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Hospital Técnico - todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

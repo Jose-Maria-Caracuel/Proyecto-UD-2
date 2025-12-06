@@ -1,0 +1,613 @@
+/* CSS General */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: rgba(99, 164, 255, 1);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* NAVIGATION */
+nav {
+    background-color: rgba(99, 164, 255, 1);
+    padding: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 1rem;
+    list-style: none;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgba(80, 150, 230, 1);
+    color: white;
+}
+
+/* MAIN */
+main {
+    padding: 2rem;
+    flex-grow: 1;
+    transition: opacity 0.2s ease-in-out;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+main h1 {
+    color: rgba(99, 164, 255, 1);
+    border-bottom: 2px solid rgba(99, 164, 255, 1);
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+main h2 {
+    color: rgba(99, 164, 255, 1);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+main h3 {
+    color: rgba(99, 164, 255, 0.85);
+    margin-top: 1.2rem;
+    margin-bottom: 0.8rem;
+}
+
+/* LINKS */
+a {
+    color: rgba(99, 164, 255, 1);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgba(80, 150, 230, 1);
+    text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+    background-color: rgba(99, 164, 255, 1);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+    margin: 0 0.5rem;
+}
+
+footer img {
+    width: 32px;
+    height: 32px;
+    margin: 0 4px;
+    vertical-align: middle;
+}
+
+/* BUTTONS */
+button {
+    background-color: rgba(99, 164, 255, 1);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0.5rem;
+}
+
+button:hover {
+    background-color: rgba(80, 150, 230, 1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* FORM ELEMENTS */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid rgba(99, 164, 255, 0.3);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 0.5rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: rgba(99, 164, 255, 1);
+    box-shadow: 0 0 0 3px rgba(99, 164, 255, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+/* TABLES */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: rgba(99, 164, 255, 1);
+    color: white;
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(99, 164, 255, 0.2);
+}
+
+tr:hover {
+    background-color: rgba(99, 164, 255, 0.05);
+}
+
+/* UTILITY CLASSES */
+.Prescripciones {
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid rgba(99, 164, 255, 0.3);
+    border-radius: 8px;
+    padding: 2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.Prescripciones:hover {
+    box-shadow: 0 4px 16px rgba(99, 164, 255, 0.2);
+}
+
+.Prescripciones h1 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.Prescripciones li {
+    margin: 0.75rem 1.5rem;
+    list-style: none;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+/* CSS para el inicio de sesión y registro */
+.inicio {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(imagenes/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.inicio > * {
+    position: relative;
+    z-index: 2;
+}
+
+.inicio div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.inicio h2 {
+    text-align: center;
+    color: rgba(99, 164, 255, 1);
+    margin-top: 0;
+}
+
+.inicio label {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.inicio input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(99, 164, 255, 0.3);
+    border-radius: 4px;
+}
+
+.inicio button {
+    width: 100%;
+    margin: 0.5rem 0;
+}
+
+/* LISTA DE PACIENTES */
+.lista_pacientes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lista_pacientes table {
+    width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin: 0.5rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .Prescripciones {
+        padding: 1rem;
+    }
+    
+    .inicio div {
+        min-width: 280px;
+        padding: 2rem;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.5rem;
+    }
+}
+
+
+.guia_estilos {
+    padding: 2rem;
+}
+
+.seccion_guia {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-left: 5px solid rgba(99, 164, 255, 1);
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seccion_guia h2 {
+    color: rgba(99, 164, 255, 1);
+    border-bottom: 2px solid rgba(99, 164, 255, 1);
+    padding-bottom: 1rem;
+    margin-top: 0;
+}
+
+.paleta_colores {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.color_swatch {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color_muestra {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.color_info {
+    background-color: #f5f5f5;
+    padding: 1rem;
+}
+
+.color_info p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.tipografia_ejemplo {
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    background-color: rgba(99, 164, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(99, 164, 255, 0.3);
+}
+
+.tipografia_ejemplo h1 {
+    margin-top: 0;
+    color: rgba(99, 164, 255, 1);
+}
+
+.tipografia_ejemplo h2,
+.tipografia_ejemplo h3,
+.tipografia_ejemplo h4,
+.tipografia_ejemplo h5,
+.tipografia_ejemplo h6 {
+    color: rgba(99, 164, 255, 1);
+    margin-top: 1rem;
+}
+
+.componentes_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.componente {
+    background-color: rgba(99, 164, 255, 0.05);
+    border: 1px solid rgba(99, 164, 255, 0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.componente h3 {
+    color: rgba(99, 164, 255, 1);
+    margin-top: 0;
+}
+
+.boton_ejemplo {
+    background-color: rgba(99, 164, 255, 1);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.boton_ejemplo:hover {
+    background-color: rgba(80, 150, 230, 1);
+}
+
+.formulario_ejemplo {
+    display: grid;
+    gap: 1rem;
+}
+
+.formulario_ejemplo label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formulario_ejemplo input,
+.formulario_ejemplo textarea,
+.formulario_ejemplo select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid rgba(99, 164, 255, 0.3);
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.formulario_ejemplo input:focus,
+.formulario_ejemplo textarea:focus,
+.formulario_ejemplo select:focus {
+    outline: none;
+    border-color: rgba(99, 164, 255, 1);
+    box-shadow: 0 0 0 3px rgba(99, 164, 255, 0.1);
+}
+
+.tabla_ejemplo {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.tabla_ejemplo th {
+    background-color: rgba(99, 164, 255, 1);
+    color: white;
+    padding: 1rem;
+    text-align: left;
+    font-weight: bold;
+}
+
+.tabla_ejemplo td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid rgba(99, 164, 255, 0.2);
+}
+
+.tabla_ejemplo tr:hover {
+    background-color: rgba(99, 164, 255, 0.05);
+}
+
+.iconografia {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.icono_item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(99, 164, 255, 0.05);
+    border-radius: 8px;
+    border: 1px solid rgba(99, 164, 255, 0.2);
+}
+
+.icono_item .emoji {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.contenedor_imagenes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.imagen_item {
+    background-color: rgba(99, 164, 255, 0.1);
+    border: 2px dashed rgba(99, 164, 255, 0.5);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen_item p {
+    color: rgba(99, 164, 255, 0.7);
+    margin: 0;
+}
+
+.resumen {
+    background-color: rgba(99, 164, 255, 0.1);
+    border-left: 5px solid rgba(99, 164, 255, 1);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.resumen h3 {
+    margin-top: 0;
+    color: rgba(99, 164, 255, 1);
+}
+
+.resumen ul {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.resumen li {
+    margin: 0.5rem 1.5rem;
+    text-align: left;
+}

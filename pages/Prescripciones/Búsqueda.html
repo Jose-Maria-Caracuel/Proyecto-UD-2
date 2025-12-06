@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Búsqueda de Pacientes - Hospital Técnico</title>
+    <link rel="stylesheet" href="../../css.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Técnico</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Página principal</a></li>
+            <li><a href="../../inicio.html">Iniciar sesión</a></li>
+            <li><a href="../../registro.html">Registrarse</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Búsqueda de Pacientes</h1>
+        <div class="busqueda_form">
+            <form>
+                <label>Nombre del paciente:<br>
+                    <input type="text" name="nombre" placeholder="Ingrese nombre">
+                </label>
+                <label>Número de historia clínica:<br>
+                    <input type="text" name="historia" placeholder="Ingrese número de historia">
+                </label>
+                <label>Documento de identidad:<br>
+                    <input type="text" name="documento" placeholder="Ingrese documento">
+                </label>
+                <button type="submit">Buscar</button>
+                <button type="reset">Limpiar</button>
+            </form>
+        </div>
+        <div class="resultados_busqueda">
+            <h2>Resultados</h2>
+            <table>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Documento</th>
+                    <th>Historia Clínica</th>
+                    <th>Acciones</th>
+                </tr>
+                <tr>
+                    <td>Carlos López</td>
+                    <td>87654321</td>
+                    <td>HC-001</td>
+                    <td><a href="detalles_L.html">Ver detalles</a></td>
+                </tr>
+                <tr>
+                    <td>Patricia Sánchez</td>
+                    <td>76543210</td>
+                    <td>HC-002</td>
+                    <td><a href="detalles_L.html">Ver detalles</a></td>
+                </tr>
+            </table>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Hospital Técnico - todos los derechos reservados</p>
+    </footer>
+</body>
+</html>

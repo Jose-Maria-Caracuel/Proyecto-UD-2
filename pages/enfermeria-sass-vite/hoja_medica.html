@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoja de Medicación - Hospital Técnico</title>
+    <link rel="stylesheet" href="../../css.css">
+  </head>
+  <body>
+    <header>
+        <h1>Hospital Técnico</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="../../index.html">Página principal</a></li>
+            <li><a href="../../inicio.html">Iniciar sesión</a></li>
+            <li><a href="../../registro.html">Registrarse</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Hoja de Medicación</h1>
+        <div class="datos_paciente">
+            <h2>Información del Paciente</h2>
+            <div class="paciente_info">
+                <p><strong>Nombre:</strong> Juan Pérez García</p>
+                <p><strong>Cama:</strong> 101</p>
+                <p><strong>Documento:</strong> 12345678</p>
+                <p><strong>Fecha de ingreso:</strong> 08/12/2025</p>
+                <p><strong>Doctor responsable:</strong> Dr. Morales</p>
+                <p><strong>Enfermero/a responsable:</strong> Lic. Sandra Méndez</p>
+            </div>
+        </div>
+        <div class="medicamentos_administrados">
+            <h2>Medicamentos Administrados</h2>
+            <table>
+                <tr>
+                    <th>Medicamento</th>
+                    <th>Dosis</th>
+                    <th>Vía de administración</th>
+                    <th>Hora programada</th>
+                    <th>Administrado</th>
+                    <th>Firma enfermero/a</th>
+                </tr>
+                <tr>
+                    <td>Atorvastatina</td>
+                    <td>40mg</td>
+                    <td>Oral</td>
+                    <td>08:00</td>
+                    <td>✓ 08:15</td>
+                    <td>S.M.</td>
+                </tr>
+                <tr>
+                    <td>Metoprolol</td>
+                    <td>50mg</td>
+                    <td>Oral</td>
+                    <td>08:00</td>
+                    <td>✓ 08:15</td>
+                    <td>S.M.</td>
+                </tr>
+                <tr>
+                    <td>Suero fisiológico</td>
+                    <td>500ml</td>
+                    <td>IV</td>
+                    <td>12:00</td>
+                    <td>✓ 12:05</td>
+                    <td>S.M.</td>
+                </tr>
+                <tr>
+                    <td>Omeprazol</td>
+                    <td>20mg</td>
+                    <td>Oral</td>
+                    <td>20:00</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        <div class="observaciones">
+            <h2>Observaciones y Anotaciones</h2>
+            <textarea rows="6" placeholder="Anotar cualquier observación relevante sobre la administración de medicamentos o cambios en el estado del paciente"></textarea>
+            <button>Guardar observaciones</button>
+        </div>
+    </main>
+    <footer>
+        <p>© 2025 Hospital Técnico - todos los derechos reservados</p>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
